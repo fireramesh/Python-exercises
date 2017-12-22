@@ -7,3 +7,6 @@ def list_x(old_list):
 a=[1,2,3,4,5]
 b=list_x(a)
 print(b)
+a=[1,2,3,4,5]
+b=[a[x] for x in [0,len(a)-1]]
+print(b)
