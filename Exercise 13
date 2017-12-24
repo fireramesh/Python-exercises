@@ -1,0 +1,13 @@
+def fib(x):
+    list=[]
+    list.append(1)
+    list.append(1)
+    for k in range(2,x-1):
+        z=list[k-1]+list[k-2]
+        list.append(z)
+    #print(list[k])
+    return(list)
+print("Enter the number f sequence")
+x=int(input())
+y=fib(x)
+print(y)
