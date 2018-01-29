@@ -1,0 +1,27 @@
+#program to print Cows and Bulls
+#Generate a 4 digit number
+import random
+x="1234"
+#print(x)
+print("Welcome to the Cows and Bulls Game!")
+while True:
+    Cows=0
+    Bulls=0
+    print("Enter a 4 digit number")
+    Guess=input()
+    #Loop to find cows
+    for i in range(0,len(Guess)):
+        if x[i]==Guess[i]:
+            #print(x[i])
+            #print(Guess[i])
+            Cows=Cows+1
+    #print("The cows are %s" %Cows)
+    for i in range(0,len(Guess)):
+        for j in range(0,len(Guess)):
+            if x[i]==Guess[j]:
+                if i==j:
+                    continue
+                else:
+                    Bulls=Bulls+1           
+            
+    print("The Cows are Bulls are %s,%s" %(Cows,Bulls))
