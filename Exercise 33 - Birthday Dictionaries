@@ -1,0 +1,9 @@
+#create a dictionary
+dict1={'Ram':'12-05-1984','Brin':'19-06-1989','Anu':'29-05-1984'}
+print("Welcome to the birthday dictionary. We know the birthdays of:")
+for i in dict1:
+    print(i)
+print("Who's birthday do you want to look up?")               
+x=input()
+print("The birthday of " + str(x) + " is " + dict1.get(x,"none like him"))
+        
