@@ -1,0 +1,26 @@
+import json
+import time
+with open("info.json","r") as f:
+    info = json.load(f)
+#for i in info:
+#    print(i)
+
+print("we have the bithdays of")
+time.sleep(1)
+for i in info:
+    print(i)
+    time.sleep(0.7)
+
+print("Whose birthday do u want?")
+x=input()
+if x in info:
+    print(info[x])
+
+print("Do you want to add user name?")
+y=input()
+if y == "Yes":
+    z=input("Enter the user name")
+    z1=input("Enter the brthdate")
+    info[z]=z1
+    with open("info.json","w") as f:
+        json.dump(info,f)
