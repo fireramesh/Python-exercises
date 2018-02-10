@@ -1,0 +1,33 @@
+def diagonal(x):
+    i=j=0
+    if x[i][j]==x[i+1][j+1]==x[i+2][j+2]:
+        return 3
+    elif x[i][j+2]==x[i+1][j+1]==x[i+2][j]:
+        return 4
+    else:
+        return 0
+def row(x):
+    for i in range(3):
+        j=0
+        if x[i][j]==x[i][j+1]==x[i][j+2]:
+            return 1
+        else:
+            return 0
+            
+def column(x):
+    for j in range(3):
+        i=0
+        if x[i][j]==x[i+1][j]==x[i+2][j]:
+            return 2
+        else:
+            return 0
+value = 0
+value = diagonal(y)
+if value ==
+value = row(y)
+value = column(y)
+if value == 0:
+    print("No Winner")
+else:
+    print(value)
+    print("Winner")
