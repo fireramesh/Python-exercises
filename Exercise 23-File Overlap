@@ -1,0 +1,13 @@
+#Read the primenumbers and store in a list
+with open("primenumbers.txt","r")as f:
+    x=f.read().split("\n")
+#print(x)
+with open("happynumbers.txt","r")as f1:
+    y=f1.read().split("\n")
+#print(y)
+list1=[]
+#find the overlapping numbers
+for i in x:
+    if i in y:
+        list1.append(i)
+print(list1)
