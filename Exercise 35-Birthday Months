@@ -1,0 +1,30 @@
+#Execrise 33
+import time
+import json
+#Birthdays = {'Ramesh':'12-05-1984','Makesh':'07-01-1988'}
+def addDetails():
+    print("Enter the person name")
+    name=input()
+    print("Enter the birthdate")
+    date=input()
+    Birthdays[name]=date
+    with open("info.json","w") as f:
+        json.dump(Birthdays,f)
+        
+        
+with open("info.json","r") as f:
+    Birthdays = json.load(f)
+print("Welcome to the birthday dictionary. We know the birthdays of:")
+time.sleep(1)
+
+y=[]
+for i in Birthdays:
+    #print(Birthdays.get(i,0))
+    s=Birthdays.get(i,0).split("-")
+    d=s[1]
+    #print(d)
+    y.append(d)
+print(y)
+from collections import Counter
+c=Counter(y)
+print(c)
