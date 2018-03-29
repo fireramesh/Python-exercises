@@ -1,0 +1,9 @@
+
+def facto(n):
+    if n>1:
+        x=n*facto(n-1)
+        return x
+    else:
+        return 1
+y=facto(10)
+print(y)
