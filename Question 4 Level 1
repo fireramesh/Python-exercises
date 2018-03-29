@@ -1,0 +1,6 @@
+values=input()
+#print(values)
+l=values.split(',')
+print(l)
+g=tuple(l)
+print(g)
